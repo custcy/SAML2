@@ -262,7 +262,7 @@ namespace SAML2.Protocol
 
             PreHandleAssertion(elem, endp);
 
-            if (endp == null || endp.Metadata == null) {
+            if (endp == null ) {    //|| endp.Metadata == null) {
                 logger.Error(ErrorMessages.AssertionIdentityProviderUnknown);
                 throw new Saml20Exception(ErrorMessages.AssertionIdentityProviderUnknown);
             }
