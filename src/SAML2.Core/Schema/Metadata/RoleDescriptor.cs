@@ -11,6 +11,8 @@ namespace SAML2.Schema.Metadata
     /// information intended to provide processing commonality across different roles. New roles can be defined
     /// by extending its abstract RoleDescriptorType complex type
     /// </summary>
+    [XmlInclude(typeof(SecurityTokenServiceType))]
+    [XmlInclude(typeof(ApplicationServiceType))]
     [XmlInclude(typeof(AttributeAuthorityDescriptor))]
     [XmlInclude(typeof(PdpDescriptor))]
     [XmlInclude(typeof(AuthnAuthorityDescriptor))]

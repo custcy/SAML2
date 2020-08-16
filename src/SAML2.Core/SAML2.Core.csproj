@@ -26,6 +26,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -167,6 +168,8 @@
     <Compile Include="Schema\Metadata\LocalizedName.cs" />
     <Compile Include="Schema\Metadata\LocalizedURI.cs" />
     <Compile Include="Schema\Metadata\Organization.cs" />
+    <Compile Include="Schema\Metadata\ApplicationServiceType.cs" />
+    <Compile Include="Schema\Metadata\SecurityTokenServiceType.cs" />
     <Compile Include="Schema\Metadata\PdpDescriptor.cs" />
     <Compile Include="Schema\Metadata\RequestedAttribute.cs" />
     <Compile Include="Schema\Metadata\RoleDescriptor.cs" />
