@@ -44,7 +44,7 @@ namespace SAML2.Protocol
                 throw new ArgumentNullException("keys");
             }
 
-            foreach (var clause in keys.SelectMany(k => k.KeyInfo.Items.AsEnumerable().Cast<KeyInfoClause>())) {
+            foreach (var clause in keys.SelectMany(k => ((KeyInfo)k.KeyInfo).Cast<KeyInfoClause>())) {
                 // Check certificate specifications
                 if (clause is KeyInfoX509Data) {
                     var cert = XmlSignatureUtils.GetCertificateFromKeyInfo((KeyInfoX509Data)clause);
