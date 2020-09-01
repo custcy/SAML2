@@ -264,6 +264,11 @@ namespace SAML2.Utils
         /// <param name="cert">The certificate used to sign the document</param>
         public static void SignDocument(XmlDocument doc, string id, X509Certificate2 cert)
         {
+            if (cert == null)
+            {
+                return;
+            }
+
             var signedXml = new SignedXml(doc);
             signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigExcC14NTransformUrl;
             signedXml.SigningKey = cert.PrivateKey;
